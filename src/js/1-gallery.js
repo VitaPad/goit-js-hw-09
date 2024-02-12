@@ -90,7 +90,6 @@ const lightBox = new SimpleLightbox('.gallery-item', {
   captionDelay: 250,
   /* options */
 });
-
 /* 
 const gallery = document.querySelector('.gallery');
 
