@@ -83,12 +83,25 @@ function createGallery(images) {
     )
     .join('');
 }
+
 gallery.innerHTML = createGallery(images);
-const lightBox = new SimpleLightbox('.gallery-item', {
+
+const lightBox = new SimpleLightbox('.gallery-link', {
   captionsData: 'alt',
   captionDelay: 250,
   /* options */
 });
+
+function imgClick(event) {
+  event.preventDefault();
+  if (event.target.nodeName === 'IMG') {
+    return;
+  }
+  lightBox.open();
+}
+
+gallery.addEventListener('click', imgClick);
+
 /* 
 const gallery = document.querySelector('.gallery');
 
