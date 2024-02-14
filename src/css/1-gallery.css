@@ -1,7 +1,7 @@
 body {
   margin: 24px 156px;
 }
-section {
+.gallery {
   list-style: none;
   display: flex;
   justify-content: center;
